@@ -15,7 +15,9 @@ using namespace std;
             return -1;
         }
     }
-
+    int mmiOptiEuclid(int a, int m){
+        
+    }
 int main(){
     int a,m;
     cin>>a>>m;

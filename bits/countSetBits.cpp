@@ -25,7 +25,7 @@ int table[256];
           table[i] = (i & 1) + table[i / 2];
       }
 	} 
-	
+    //first count for first 8 bits then rightshift 8 to count for next 8 bits and so on till all 32 bits are counted
 	int lookupCount(int n)
 	{
         int res=table[n&255];

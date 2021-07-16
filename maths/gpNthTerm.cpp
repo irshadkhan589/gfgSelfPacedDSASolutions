@@ -7,7 +7,7 @@ double gpNthTerm(int n1, int n2,int n){
     double N=double(n);
     double R=N2/N1;
     double t=double(N1*pow(R,N-1));
-    return t;
+    return floor(t);
 }
 int main(){
     int n1,n2,n;

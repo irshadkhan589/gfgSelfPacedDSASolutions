@@ -2,9 +2,6 @@
 using namespace std;
 
 void nBonacci(int a[], int n,int k){
-    for(int i=0;i<k-1;i++){
-        a[i]=0;
-    }
     a[k-1]=1;
     int sumAti=0;
     for(int i=0;i<k;i++){

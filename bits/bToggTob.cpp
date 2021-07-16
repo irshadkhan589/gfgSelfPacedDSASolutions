@@ -3,14 +3,17 @@ using namespace std;
 int binaryToGray(int n){
     return n^(n>>1);
 }
- int grayToBinary(int n)
+  int grayToBinary(int n)
 {
-int binary=0;
-for(;n;n=n>>1)
-{
-    binary^=n; //binary=binary^gray;
+
+int num = n;
+
+while (n>=1){
+n=n>>1;
+num = (num^n);
+
 }
-return binary;
+return num;
 }
 int main(){
     int n;

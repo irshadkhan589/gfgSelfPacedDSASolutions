@@ -8,7 +8,7 @@ int factorialNonTail(int n){
 }
 int factorialTail(int n,int k){
     if(n==0||n==1){
-        return k;
+        return 1;
     }
     return factorialTail(n-1,k*n);
 }
