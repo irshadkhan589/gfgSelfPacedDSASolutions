@@ -11,21 +11,18 @@ struct Node{
 };
 
 Node *deleteAtEnd(Node *head){
- Node *temp = head;
- if(temp == NULL){
-     return NULL;
- }   
- else if(temp->next ==NULL){
-     return NULL;
+ if(head == NULL){
+   return NULL;
  }
- else{
-     while(temp->next->next!=NULL){
-         temp = temp->next;
-     }
-     delete(temp->next);
-     temp->next = NULL;
-     return head;
+ if(head->next == NULL){
+   return NULL;
  }
+ Node *current = head;
+ while(current->next->next!=NULL){
+   current = current->next;
+ }
+
+ current->next = NULL;
  return head;
 }
 

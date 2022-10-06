@@ -1,13 +1,16 @@
 #include<iostream>
 using namespace std;
-   int linearSearch(int arr[], int n, int x)
-{
-    int i;
-    for (i = 0; i < n; i++)
-        if (arr[i] == x)
+
+int linearSearch(int arr[],int n, int x){
+    int i = 0;
+    for(i = 0;i<n;i++){
+        if(arr[i]==x){
             return i;
+        }
+    }
     return -1;
 }
+
 int binarySearch(int arr[], int n, int x){
     int s=0;
     int e=n-1;
@@ -23,6 +26,7 @@ int binarySearch(int arr[], int n, int x){
     }
     return -1;
 }
+
 int main(){
     int n;
     cin>>n;

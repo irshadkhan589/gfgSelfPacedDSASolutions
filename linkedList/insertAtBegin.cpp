@@ -2,31 +2,39 @@
 using namespace std;
 
 struct Node{
-    Node *next;
-    int data;
-    Node(int x){
-        data = x;
-        next = NULL;
-    }
+  int data;
+  Node *next;
+  Node(int x){
+    data = x;
+    next = NULL;
+  }
 };
-Node *insert(Node *head, int value){
+
+Node *insertAtBegin(Node *head, int value){
     Node *temp = new Node(value);
-    temp->next = head;
-    return temp;
-}
-void display(Node *head){
-    Node *curr = head;
-    while(curr!=NULL){
-        cout<<curr->data<<' ';
-        curr = curr->next;
+    if(head == NULL){
+      return temp;
+    }
+    else{
+      temp->next = head;
+      return temp;
     }
 }
 
+void traverse(Node *head){
+  Node *current = head;
+  while(current!=NULL){
+    cout<<current->data<<"->";
+    current = current->next;
+  }
+}
+
 int main(){
-    Node *head = new Node(10);
-    head = insert(head,30);
-    head = insert(head,40);
-    display(head);
-    cout<<endl;
-    return 0;
+  Node *head = new Node(10);
+  Node *node2 = new Node(20);
+  head->next = node2;
+  head = insertAtBegin(head,5);
+  head = insertAtBegin(head,2);
+  traverse(head);
+  return 0;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 int largestOptimised(int a[], int n){
     int largest=INT_MIN;
-    for(int i=1;i<n;i++){
+    for(int i=1;i<=n;i++){
         largest=max(a[i-1],largest);
     }
     return largest;

@@ -10,6 +10,7 @@ int deletion(int a[], int cap, int n, int i){
     return n-1;
 }
 }
+
 int main(){
     //cap is the maximum capacity of array
     int cap,n,idx;
