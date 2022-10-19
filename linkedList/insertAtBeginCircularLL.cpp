@@ -29,7 +29,20 @@ struct Node{
 
 // in O(1) time
 
-
+  Node *insertAtBegin(Node *head, int value){
+    Node *temp = new Node(value);
+    if(head == NULL){
+      temp->next = temp;
+      return temp;
+    }
+    temp->next = head->next;
+    head->next = temp;
+    int swapVar;
+    swapVar = head->data;
+    head->data = temp->data;
+    temp->data = swapVar;
+    return head;
+  }
 
 
 void traverse(Node *head){
@@ -49,6 +62,7 @@ int main(){
   head->next = temp;
   temp->next = head;
   head = insertAtBegin(head,5);
+  head = insertAtBegin(head,4);
   traverse(head);
   return 0;
 }

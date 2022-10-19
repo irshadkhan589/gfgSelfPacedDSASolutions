@@ -35,6 +35,7 @@ int main(){
   head->next = node2;
   head = insertAtBegin(head,5);
   head = insertAtBegin(head,2);
+  head = insertAtBeginO1(head,1);
   traverse(head);
   return 0;
 }
